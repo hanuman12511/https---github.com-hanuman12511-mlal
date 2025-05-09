@@ -1,8 +1,135 @@
+    #  {}  ,:
+
+dataset = {}
+emaillist=[]
+passwordlist=[]
+
+
+class Home:
+    def __init__(self,email):
+        print("hello !! "+email)
+        input()
+
+
+class Register:
+    email=''
+    password=''
+    def __init__(self,e,p):
+        self.email=e
+        self.password=p
+        self.saveData()
+    def saveData(self):
+        emaillist.append(self.email)
+        passwordlist.append(self.password)
+        dataset.update({"email":emaillist,"password":passwordlist})
+      
+
+
+class Login:
+    email=''
+    password=''
+    def __init__(self,e,p):
+        self.email = e
+        self.password = p
+        self.userLogin()
+    def userLogin(self):
+        for i  in range(len(dataset['email'])):
+            if(self.email == dataset['email'][i]):
+                break
+        else:
+            print("email not found")
+        if(self.password ==  dataset['password'][i]):
+            home = Home(self.email)
+
+while(True):
+    ch = int(input("1 for register\n2 for login"))
+    email = input("enter email")
+    password = input("enter passwrod")
+    if(ch == 1):
+        
+        register = Register(email,password)
+    elif (ch == 2):
+        Login(email,password)
 
 
 
 
-class
+# class Demo: 
+#     name=""
+#     def __init__(self,name):
+#         self.name=name
+#     def getData(self):
+#         return self.name
+
+# name= input("enter name")
+# obj =Demo(name)
+# print(obj.getData())
+
+
+
+# class Demo: 
+#     name=""
+#     def setData(self,name):
+#         self.name=name
+#     def getData(self):
+#         print(self.name)
+
+# name= input("enter name")
+# obj =Demo()
+# obj.setData(name)
+# obj.getData()
+#print(obj)
+
+
+# class Demo: 
+#     name=""
+#     def __init__(self):
+#         print("*******************")
+#         self.name=input("enter name")
+#     def __str__ (self):
+#         return self.name
+
+
+# obj =Demo()
+# print(obj)
+
+# class Demo: 
+#     name=""
+#     def __init__(self):
+#         print("*******************")
+#         self.name=input("enter name")
+#     def showdata(self):
+#         print(self.name)
+
+
+# obj =Demo()
+# obj.showdata()
+
+        
+
+
+# def fun():
+#     print("hello")
+
+
+# class Demo: 
+#     name = "";
+#     def setData(self):
+#         self.name = input("enter name")
+#     def getData(self):
+#         print(self.name)
+
+
+# obj = Demo()
+
+# obj.setData()
+# obj.getData()
+
+
+
+
+
+
 
 # class  Demo:
 #     name = "hanu"
