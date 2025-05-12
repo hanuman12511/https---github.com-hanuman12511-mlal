@@ -1,55 +1,106 @@
+  
+
+# class Info :
+#     name=""
+#     emp_id=""
+
+#     def __init__(self,n,eid):
+#         self.name =n
+#         self.emp_id = eid 
+#     def showData(self):
+#         print("")
+
+
+# class Project(Info):
+#     project = ""
+#     def __init__(self, n, eid,project):
+
+#         super().__init__(n, eid)
+#         self.project = project
+#     def showData(self):
+#         try:
+#             print("Project",self.project)
+#             print("empid",self.emp_id)
+#             print("name",self.name)
+#         except:
+#             print("Error")
+
+# class Emp (Info) :
+#     salary = ""
+#     def __init__(self, n, eid,salary):
+#         super().__init__(n, eid)
+#         self.salary = salary
+    
+#     def showData(self):
+#         print("empid",self.emp_id)
+#         print("name",self.name)
+#         print("salary",self.salary)
+
+
+# n = input("enter name")
+# eid = input("enter empid")
+# salary = input("enter salary")
+# obj = Emp(n,eid,salary)
+# obj.showdata()
+
+# p = input("enter project name")
+# obj = Project(n,eid,p)
+# obj.showproject()
+
+
+  
     #  {}  ,:
 
-dataset = {}
-emaillist=[]
-passwordlist=[]
+# dataset = {}
+# emaillist=[]
+# passwordlist=[]
 
 
-class Home:
-    def __init__(self,email):
-        print("hello !! "+email)
-        input()
+# class Home:
+#     def __init__(self,email):
+#         print("hello !! "+email)
+#         input()
 
 
-class Register:
-    email=''
-    password=''
-    def __init__(self,e,p):
-        self.email=e
-        self.password=p
-        self.saveData()
-    def saveData(self):
-        emaillist.append(self.email)
-        passwordlist.append(self.password)
-        dataset.update({"email":emaillist,"password":passwordlist})
+# class Register:
+#     email=''
+#     password=''
+#     def __init__(self,e,p):
+#         self.email=e
+#         self.password=p
+#         self.saveData()
+#     def saveData(self):
+#         emaillist.append(self.email)
+#         passwordlist.append(self.password)
+#         dataset.update({"email":emaillist,"password":passwordlist})
       
 
 
-class Login:
-    email=''
-    password=''
-    def __init__(self,e,p):
-        self.email = e
-        self.password = p
-        self.userLogin()
-    def userLogin(self):
-        for i  in range(len(dataset['email'])):
-            if(self.email == dataset['email'][i]):
-                break
-        else:
-            print("email not found")
-        if(self.password ==  dataset['password'][i]):
-            home = Home(self.email)
+# class Login:
+#     email=''
+#     password=''
+#     def __init__(self,e,p):
+#         self.email = e
+#         self.password = p
+#         self.userLogin()
+#     def userLogin(self):
+#         for i  in range(len(dataset['email'])):
+#             if(self.email == dataset['email'][i]):
+#                 break
+#         else:
+#             print("email not found")
+#         if(self.password ==  dataset['password'][i]):
+#             home = Home(self.email)
 
-while(True):
-    ch = int(input("1 for register\n2 for login"))
-    email = input("enter email")
-    password = input("enter passwrod")
-    if(ch == 1):
+# while(True):
+#     ch = int(input("1 for register\n2 for login"))
+#     email = input("enter email")
+#     password = input("enter passwrod")
+#     if(ch == 1):
         
-        register = Register(email,password)
-    elif (ch == 2):
-        Login(email,password)
+#         register = Register(email,password)
+#     elif (ch == 2):
+#         Login(email,password)
 
 
 
