@@ -1,3 +1,6 @@
+list=[8,9]
+
+print(list.index(9));
 
 # import pandas 
 # import pandas  as pd
