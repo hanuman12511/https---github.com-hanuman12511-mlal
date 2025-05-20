@@ -17,8 +17,11 @@ ar1 = np.char.join(arr,"U")
 ar1 = np.char.replace(arr,"U","u")
 ar1 = np.char.multiply(arr,4)
 ar1 = np.char.split(arr,"e")
-print(arr)
 ar1 = np.char.less(arr,"ue")
+ar1 = np.char.encode(arr)
+print(ar1)
+
+
 
 
 # s = "user"
